@@ -26,7 +26,7 @@
       this.el.className = this.toString();
     },
     contains: function (token) {
-      return this.el.className.indexOf(token) != -1;
+      return this.el.className.indexOf(token) !== -1;
     },
     item: function (index) {
       return this[index] || null;
@@ -34,7 +34,7 @@
     remove: function (token) {
       if (!this.contains(token)) return;
       for (var i = 0; i < this.length; i++) {
-        if (this[i] == token) break;
+        if (this[i] === token) break;
       }
       splice.call(this, i, 1);
       this.el.className = this.toString();
